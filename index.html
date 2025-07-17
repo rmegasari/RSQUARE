@@ -1,13 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSQUARE - Premium Google Spreadsheet Templates</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -40,562 +43,83 @@
             background: linear-gradient(to right, #166bb9, #4a6fa1);
             transform: translateY(-2px);
         }
-        .feature-icon {
-            background: linear-gradient(to right bottom, #4a6fa1, #166bb9);
-        }
     </style>
 </head>
-<body>
-    <!-- Navigation -->
+<body class="bg-gray-900">
+
     <nav class="px-6 py-4 bg-opacity-10 bg-white backdrop-blur-md border-b border-white border-opacity-10 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="text-3xl font-bold gradient-text">RSQUARE</div>
-            </div>
+            <div class="text-3xl font-bold gradient-text">RSQUARE</div>
             <div class="hidden md:flex space-x-8">
                 <a href="#home" class="text-white hover:text-blue-200 transition">Home</a>
                 <a href="#templates" class="text-white hover:text-blue-200 transition">Templates</a>
                 <a href="#features" class="text-white hover:text-blue-200 transition">Features</a>
-                <a href="#pricing" class="text-white hover:text-blue-200 transition">Pricing</a>
                 <a href="#contact" class="text-white hover:text-blue-200 transition">Contact</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-toggle" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="flex flex-col space-y-4 mt-4 px-4 pb-4">
-                <a href="#home" class="text-white hover:text-blue-200 transition">Home</a>
-                <a href="#templates" class="text-white hover:text-blue-200 transition">Templates</a>
-                <a href="#features" class="text-white hover:text-blue-200 transition">Features</a>
-                <a href="#pricing" class="text-white hover:text-blue-200 transition">Pricing</a>
-                <a href="#contact" class="text-white hover:text-blue-200 transition">Contact</a>
-            </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#home" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Home</a>
+            <a href="#templates" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Templates</a>
+            <a href="#features" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Features</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="py-20 px-6">
-        <div class="container mx-auto flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                     Streamline Your <span class="gradient-text">Workflow</span> with Premium Spreadsheet Templates
                 </h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-8">
+                <p class="text-lg text-gray-300 mb-8">
                     Save time and boost productivity with our professionally designed Google Spreadsheet templates.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#templates" class="btn-primary px-8 py-3 rounded-lg font-medium text-white text-center">
-                        Explore Templates
-                    </a>
-                    <a href="#contact" class="px-8 py-3 rounded-lg font-medium text-white border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10 transition text-center">
-                        Contact Us
-                    </a>
+                <div class="flex gap-4">
+                    <a href="#templates" class="btn-primary px-8 py-3 rounded-lg font-medium text-white text-center">Explore Templates</a>
+                    <a href="#contact" class="px-8 py-3 rounded-lg font-medium text-white border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10 transition text-center">Contact Us</a>
                 </div>
             </div>
-            <div class="md:w-1/2 md:pl-10">
-                <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg transform rotate-3 opacity-20"></div>
-                    <div class="relative bg-white bg-opacity-5 backdrop-blur-sm p-6 rounded-lg border border-white border-opacity-10">
-                        <svg class="w-full" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="10" y="10" width="380" height="230" rx="4" fill="#202938" stroke="#4a6fa1" stroke-width="1"/>
-                            <rect x="10" y="10" width="380" height="30" rx="4" fill="#2c3a50" stroke="#4a6fa1" stroke-width="1"/>
-                            <rect x="20" y="50" width="360" height="20" rx="2" fill="#2c3a50" fill-opacity="0.5"/>
-                            <rect x="20" y="80" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.7"/>
-                            <rect x="130" y="80" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.5"/>
-                            <rect x="240" y="80" width="140" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.3"/>
-                            <rect x="20" y="110" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.6"/>
-                            <rect x="130" y="110" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.4"/>
-                            <rect x="240" y="110" width="140" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.2"/>
-                            <rect x="20" y="140" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.5"/>
-                            <rect x="130" y="140" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.3"/>
-                            <rect x="240" y="140" width="140" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.1"/>
-                            <rect x="20" y="170" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.4"/>
-                            <rect x="130" y="170" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.2"/>
-                            <rect x="240" y="170" width="140" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.1"/>
-                            <rect x="20" y="200" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.3"/>
-                            <rect x="130" y="200" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.1"/>
-                            <rect x="240" y="200" width="140" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.05"/>
-                        </svg>
-                    </div>
+            <div class="md:w-1/2">
+                <div class="card p-6 rounded-lg">
+                    <svg class="w-full" viewBox="0 0 400 250"><rect x="10" y="10" width="380" height="230" rx="4" fill="#202938"/><rect x="10" y="10" width="380" height="30" rx="4" fill="#2c3a50"/><rect x="20" y="50" width="360" height="20" rx="2" fill="#2c3a50" fill-opacity="0.5"/><rect x="20" y="80" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.7"/><rect x="130" y="80" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.5"/><rect x="240" y="80" width="140" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.3"/><rect x="20" y="110" width="360" height="20" rx="2" fill="#2c3a50" fill-opacity="0.4"/><rect x="20" y="140" width="360" height="20" rx="2" fill="#2c3a50" fill-opacity="0.3"/><rect x="20" y="170" width="360" height="20" rx="2" fill="#2c3a50" fill-opacity="0.2"/></svg>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Templates Section -->
-    <section id="templates" class="py-16 px-6 bg-gradient-to-b from-[#16213e] to-[#0f3460]">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Premium Templates</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Professionally designed Google Spreadsheet templates to help you manage your data efficiently.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Template 1 -->
-                <div class="card rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-80" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
-                            <path d="M7 12h2v5H7zm4-7h2v12h-2zm4 4h2v8h-2z"/>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Financial Tracker</h3>
-                        <p class="text-gray-300 mb-4">
-                            Track your income, expenses, and savings with our comprehensive financial template.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-blue-300 font-semibold">$19.99</span>
-                            <button class="btn-primary px-4 py-2 rounded-lg text-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Template 2 -->
-                <div class="card rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-600 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-80" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2V9h-2V7h4v10z"/>
-                            <path d="M7 7h2v2H7zm0 4h2v2H7zm0 4h2v2H7zm8-8h2v2h-2zm0 4h2v2h-2zm0 4h2v2h-2z"/>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Project Management</h3>
-                        <p class="text-gray-300 mb-4">
-                            Organize tasks, track progress, and manage resources with our project management template.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-blue-300 font-semibold">$24.99</span>
-                            <button class="btn-primary px-4 py-2 rounded-lg text-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Template 3 -->
-                <div class="card rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-teal-600 flex items-center justify-center">
-                        <svg class="w-24 h-24 text-white opacity-80" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H8V7h2v2h2v2h-2v2h2v4z"/>
-                            <path d="M15 11h2v6h-2z"/>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Inventory Management</h3>
-                        <p class="text-gray-300 mb-4">
-                            Keep track of your inventory, sales, and restocking needs with our inventory template.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-blue-300 font-semibold">$29.99</span>
-                            <button class="btn-primary px-4 py-2 rounded-lg text-sm">View Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <button class="btn-primary px-8 py-3 rounded-lg font-medium">
-                    View All Templates
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-16 px-6">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Templates</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Our Google Spreadsheet templates are designed to save you time and improve your productivity.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="card p-6 rounded-xl">
-                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Time-Saving</h3>
-                    <p class="text-gray-300">
-                        Our templates are ready to use, saving you hours of setup time and allowing you to focus on what matters most.
-                    </p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="card p-6 rounded-xl">
-                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Professional Design</h3>
-                    <p class="text-gray-300">
-                        Expertly designed with clean layouts, intuitive navigation, and professional formatting for better data visualization.
-                    </p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="card p-6 rounded-xl">
-                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Customizable</h3>
-                    <p class="text-gray-300">
-                        Easily customize our templates to fit your specific needs while maintaining their functionality and design.
-                    </p>
-                </div>
-                
-                <!-- Feature 4 -->
-                <div class="card p-6 rounded-xl">
-                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Secure</h3>
-                    <p class="text-gray-300">
-                        Your data remains private and secure within your Google account, with no third-party access to your information.
-                    </p>
-                </div>
-                
-                <!-- Feature 5 -->
-                <div class="card p-6 rounded-xl">
-                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Automated Functions</h3>
-                    <p class="text-gray-300">
-                        Built-in formulas and functions automate calculations and data processing, reducing manual work and errors.
-                    </p>
-                </div>
-                
-                <!-- Feature 6 -->
-                <div class="card p-6 rounded-xl">
-                    <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Support & Updates</h3>
-                    <p class="text-gray-300">
-                        Receive dedicated support and regular updates to ensure your templates remain functional and up-to-date.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16 px-6 bg-gradient-to-b from-[#0f3460] to-[#1a1a2e]">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Choose the plan that works best for your needs.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Basic Plan -->
-                <div class="card rounded-xl overflow-hidden">
-                    <div class="p-8 text-center">
-                        <h3 class="text-2xl font-bold mb-2">Basic</h3>
-                        <div class="text-4xl font-bold mb-4">$49</div>
-                        <p class="text-gray-300 mb-6">Perfect for individuals and small projects</p>
-                        <ul class="text-left space-y-3 mb-8">
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                3 Templates
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Basic Support
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                3 Months Updates
-                            </li>
-                            <li class="flex items-center text-gray-400">
-                                <svg class="w-5 h-5 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                </svg>
-                                Custom Modifications
-                            </li>
-                        </ul>
-                        <button class="btn-primary w-full py-3 rounded-lg font-medium">
-                            Get Started
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Pro Plan -->
-                <div class="card rounded-xl overflow-hidden transform scale-105 border-2 border-blue-400 relative">
-                    <div class="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 text-sm font-semibold">
-                        POPULAR
-                    </div>
-                    <div class="p-8 text-center">
-                        <h3 class="text-2xl font-bold mb-2">Pro</h3>
-                        <div class="text-4xl font-bold mb-4">$99</div>
-                        <p class="text-gray-300 mb-6">Ideal for businesses and teams</p>
-                        <ul class="text-left space-y-3 mb-8">
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                10 Templates
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Priority Support
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                1 Year Updates
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Basic Customization
-                            </li>
-                        </ul>
-                        <button class="btn-primary w-full py-3 rounded-lg font-medium">
-                            Get Started
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Enterprise Plan -->
-                <div class="card rounded-xl overflow-hidden">
-                    <div class="p-8 text-center">
-                        <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
-                        <div class="text-4xl font-bold mb-4">$199</div>
-                        <p class="text-gray-300 mb-6">For large organizations with specific needs</p>
-                        <ul class="text-left space-y-3 mb-8">
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Unlimited Templates
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                24/7 Dedicated Support
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Lifetime Updates
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                Advanced Customization
-                            </li>
-                        </ul>
-                        <button class="btn-primary w-full py-3 rounded-lg font-medium">
-                            Get Started
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-6">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Have questions or need assistance? We're here to help.
-                </p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto">
-                <div class="card p-8 rounded-xl">
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
-                            <input type="text" id="subject" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="btn-primary w-full py-3 rounded-lg font-medium">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 px-6 bg-[#1a1a2e] border-t border-white border-opacity-10">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="text-3xl font-bold gradient-text mb-4">RSQUARE</div>
-                    <p class="text-gray-300 mb-4">
-                        Premium Google Spreadsheet templates to boost your productivity and streamline your workflow.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-white hover:text-blue-300 transition">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-white hover:text-blue-300 transition">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-white hover:text-blue-300 transition">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-white hover:text-blue-300 transition">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-300 hover:text-white transition">Home</a></li>
-                        <li><a href="#templates" class="text-gray-300 hover:text-white transition">Templates</a></li>
-                        <li><a href="#features" class="text-gray-300 hover:text-white transition">Features</a></li>
-                        <li><a href="#pricing" class="text-gray-300 hover:text-white transition">Pricing</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Templates</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Financial Tracker</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Project Management</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Inventory Management</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Budget Planner</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Marketing Dashboard</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                            <span class="text-gray-300">info@rsquare.com</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                            </svg>
-                            <span class="text-gray-300">+1 (555) 123-4567</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span class="text-gray-300">123 Template Street, Digital City, DC 12345</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-white border-opacity-10 mt-12 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2023 RSQUARE. All rights reserved.</p>
-            </div>
+    <footer class="py-8 px-6 mt-20 border-t border-white border-opacity-10">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2025 RSQUARE. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
-        
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        
-        // Smooth scrolling for anchor links
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: targetElement.offsetTop - 80, // Offset untuk tinggi nav-bar
                         behavior: 'smooth'
                     });
-                    
-                    // Close mobile menu if open
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
+                    mobileMenu.classList.add('hidden'); // Tutup menu setelah diklik
                 }
             });
         });
-        
-        // Form submission (demo only)
-        const contactForm = document.querySelector('#contact form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('This is a demo form. In a real website, this would send your message.');
-            });
-        }
     </script>
+
 </body>
 </html>
