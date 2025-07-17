@@ -15,7 +15,7 @@
 
 /* Class untuk elemen yang akan dianimasikan */
 .animated-section {
-    opacity: 0; /* Mulai dari transparan */
+    opacity: 0;
 }
 
 /* Class yang ditambahkan oleh JavaScript saat elemen terlihat */
@@ -23,21 +23,21 @@
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Pengaturan Dasar Body */
+/* Pengaturan Dasar Body - **WARNA BARU** */
 html {
     scroll-behavior: smooth;
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #0d1117, #161b22, #0f3460);
+    background: linear-gradient(135deg, #111827, #1F2937); /* Gradasi Abu-abu Gelap */
     min-height: 100vh;
-    color: #e6edf3;
+    color: #e5e7eb; /* Warna teks putih keabuan */
     overflow-x: hidden;
 }
 
-/* Teks dengan Efek Gradasi */
+/* Teks dengan Efek Gradasi - **WARNA BARU** */
 .gradient-text {
-    background: linear-gradient(to right, #58a6ff, #a371f7);
+    background: linear-gradient(to right, #FBBF24, #F97316); /* Gradasi Emas ke Oranye */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -45,37 +45,37 @@ body {
 
 /* Desain Kartu dengan Efek Kaca (Glassmorphism) */
 .card {
-    background: rgba(33, 41, 54, 0.5);
+    background: rgba(55, 65, 81, 0.4); /* Latar kartu lebih gelap */
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(139, 148, 158, 0.2);
+    border: 1px solid rgba(156, 163, 175, 0.2);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(88, 166, 255, 0.4);
+    border: 1px solid rgba(249, 115, 22, 0.4); /* Border oranye saat hover */
 }
 
-/* Tombol Utama */
+/* Tombol Utama - **WARNA BARU** */
 .btn-primary {
-    background: linear-gradient(to right, #238636, #2ea043);
+    background: linear-gradient(to right, #F97316, #EA580C); /* Gradasi Oranye */
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(46, 160, 67, 0.3);
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
 }
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(46, 160, 67, 0.4);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
 }
 
-/* Tombol Sekunder */
+/* Tombol Sekunder - **WARNA BARU** */
 .btn-secondary {
     background-color: transparent;
-    border: 2px solid #58a6ff;
-    color: #58a6ff;
+    border: 2px solid #F97316; /* Border Oranye */
+    color: #F97316; /* Teks Oranye */
     transition: all 0.3s ease;
 }
 .btn-secondary:hover {
-    background-color: #58a6ff;
-    color: #0d1117;
+    background-color: #F97316;
+    color: #111827; /* Teks Gelap */
     transform: translateY(-3px);
 }
