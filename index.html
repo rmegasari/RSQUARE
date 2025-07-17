@@ -12,11 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460);
             min-height: 100vh;
             color: #fff;
+            overflow-x: hidden;
         }
         .gradient-text {
             background: linear-gradient(to right, #e2e8f0, #ffffff);
@@ -43,6 +47,9 @@
             background: linear-gradient(to right, #166bb9, #4a6fa1);
             transform: translateY(-2px);
         }
+        .feature-icon {
+            background: linear-gradient(to right bottom, #4a6fa1, #166bb9);
+        }
     </style>
 </head>
 <body class="bg-gray-900">
@@ -54,6 +61,7 @@
                 <a href="#home" class="text-white hover:text-blue-200 transition">Home</a>
                 <a href="#templates" class="text-white hover:text-blue-200 transition">Templates</a>
                 <a href="#features" class="text-white hover:text-blue-200 transition">Features</a>
+                <a href="#pricing" class="text-white hover:text-blue-200 transition">Pricing</a>
                 <a href="#contact" class="text-white hover:text-blue-200 transition">Contact</a>
             </div>
             <div class="md:hidden">
@@ -66,25 +74,26 @@
             <a href="#home" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Home</a>
             <a href="#templates" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Templates</a>
             <a href="#features" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Features</a>
+            <a href="#pricing" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Pricing</a>
             <a href="#contact" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">Contact</a>
         </div>
     </nav>
 
     <section id="home" class="py-20 px-6">
         <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
-            <div class="md:w-1/2">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                     Streamline Your <span class="gradient-text">Workflow</span> with Premium Spreadsheet Templates
                 </h1>
                 <p class="text-lg text-gray-300 mb-8">
                     Save time and boost productivity with our professionally designed Google Spreadsheet templates.
                 </p>
-                <div class="flex gap-4">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a href="#templates" class="btn-primary px-8 py-3 rounded-lg font-medium text-white text-center">Explore Templates</a>
                     <a href="#contact" class="px-8 py-3 rounded-lg font-medium text-white border border-white border-opacity-30 hover:bg-white hover:bg-opacity-10 transition text-center">Contact Us</a>
                 </div>
             </div>
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 mt-10 md:mt-0">
                 <div class="card p-6 rounded-lg">
                     <svg class="w-full" viewBox="0 0 400 250"><rect x="10" y="10" width="380" height="230" rx="4" fill="#202938"/><rect x="10" y="10" width="380" height="30" rx="4" fill="#2c3a50"/><rect x="20" y="50" width="360" height="20" rx="2" fill="#2c3a50" fill-opacity="0.5"/><rect x="20" y="80" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.7"/><rect x="130" y="80" width="100" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.5"/><rect x="240" y="80" width="140" height="20" rx="2" fill="#4a6fa1" fill-opacity="0.3"/><rect x="20" y="110" width="360" height="20" rx="2" fill="#2c3a50" fill-opacity="0.4"/><rect x="20" y="140" width="360" height="20" rx="2" fill="#2c3a50" fill-opacity="0.3"/><rect x="20" y="170" width="360" height="20" rx="2" fill="#2c3a50" fill-opacity="0.2"/></svg>
                 </div>
@@ -92,7 +101,57 @@
         </div>
     </section>
 
-    <footer class="py-8 px-6 mt-20 border-t border-white border-opacity-10">
+    <section id="templates" class="py-16 px-6 bg-gradient-to-b from-[#16213e] to-[#0f3460]">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Premium Templates</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Professionally designed Google Spreadsheet templates to help you manage your data efficiently.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card rounded-xl overflow-hidden"><div class="h-48 bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center"><svg class="w-24 h-24 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/><path d="M7 12h2v5H7zm4-7h2v12h-2zm4 4h2v8h-2z"/></svg></div><div class="p-6"><h3 class="text-xl font-semibold mb-2">Financial Tracker</h3><p class="text-gray-300 mb-4">Track your income, expenses, and savings with our comprehensive financial template.</p><div class="flex justify-between items-center"><span class="text-blue-300 font-semibold">$19.99</span><button class="btn-primary px-4 py-2 rounded-lg text-sm">View Details</button></div></div></div>
+                <div class="card rounded-xl overflow-hidden"><div class="h-48 bg-gradient-to-br from-purple-400 to-pink-600 flex items-center justify-center"><svg class="w-24 h-24 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2V9h-2V7h4v10z"/><path d="M7 7h2v2H7zm0 4h2v2H7zm0 4h2v2H7zm8-8h2v2h-2zm0 4h2v2h-2zm0 4h2v2h-2z"/></svg></div><div class="p-6"><h3 class="text-xl font-semibold mb-2">Project Management</h3><p class="text-gray-300 mb-4">Organize tasks, track progress, and manage resources with our project management template.</p><div class="flex justify-between items-center"><span class="text-blue-300 font-semibold">$24.99</span><button class="btn-primary px-4 py-2 rounded-lg text-sm">View Details</button></div></div></div>
+                <div class="card rounded-xl overflow-hidden"><div class="h-48 bg-gradient-to-br from-green-400 to-teal-600 flex items-center justify-center"><svg class="w-24 h-24 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H8V7h2v2h2v2h-2v2h2v4z"/><path d="M15 11h2v6h-2z"/></svg></div><div class="p-6"><h3 class="text-xl font-semibold mb-2">Inventory Management</h3><p class="text-gray-300 mb-4">Keep track of your inventory, sales, and restocking needs with our inventory template.</p><div class="flex justify-between items-center"><span class="text-blue-300 font-semibold">$29.99</span><button class="btn-primary px-4 py-2 rounded-lg text-sm">View Details</button></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Templates</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Our Google Spreadsheet templates are designed to save you time and improve your productivity.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6 rounded-xl"><div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><h3 class="text-xl font-semibold mb-3">Time-Saving</h3><p class="text-gray-300">Our templates are ready to use, saving you hours of setup time.</p></div>
+                <div class="card p-6 rounded-xl"><div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg></div><h3 class="text-xl font-semibold mb-3">Professional Design</h3><p class="text-gray-300">Expertly designed with clean layouts and intuitive navigation.</p></div>
+                <div class="card p-6 rounded-xl"><div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div><h3 class="text-xl font-semibold mb-3">Customizable</h3><p class="text-gray-300">Easily customize our templates to fit your specific needs.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 px-6">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Have questions or need assistance? We're here to help.</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="card p-8 rounded-xl">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div><label for="name" class="block text-sm font-medium mb-2">Name</label><input type="text" id="name" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></div>
+                            <div><label for="email" class="block text-sm font-medium mb-2">Email</label><input type="email" id="email" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></div>
+                        </div>
+                        <div><label for="subject" class="block text-sm font-medium mb-2">Subject</label><input type="text" id="subject" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></div>
+                        <div><label for="message" class="block text-sm font-medium mb-2">Message</label><textarea id="message" rows="5" class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea></div>
+                        <div><button type="submit" class="btn-primary w-full py-3 rounded-lg font-medium">Send Message</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 bg-[#1a1a2e] border-t border-white border-opacity-10">
         <div class="container mx-auto text-center text-gray-400">
             <p>&copy; 2025 RSQUARE. All rights reserved.</p>
         </div>
@@ -115,11 +174,12 @@
                         top: targetElement.offsetTop - 80, // Offset untuk tinggi nav-bar
                         behavior: 'smooth'
                     });
-                    mobileMenu.classList.add('hidden'); // Tutup menu setelah diklik
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 }
             });
         });
     </script>
-
 </body>
 </html>
