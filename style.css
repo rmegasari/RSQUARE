@@ -23,42 +23,42 @@
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Pengaturan Dasar Body - **WARNA BARU** */
+/* Pengaturan Dasar Body - **WARNA BARU TERANG** */
 html {
     scroll-behavior: smooth;
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #111827, #1F2937); /* Gradasi Abu-abu Gelap */
+    background: linear-gradient(135deg, #F9FAFB, #FFFFFF); /* PERUBAHAN: Gradasi Abu-abu sangat terang ke putih */
     min-height: 100vh;
-    color: #e5e7eb; /* Warna teks putih keabuan */
+    color: #1F2937; /* PERUBAHAN: Warna teks utama menjadi abu-abu gelap agar mudah dibaca */
     overflow-x: hidden;
 }
 
-/* Teks dengan Efek Gradasi - **WARNA BARU** */
+/* Teks dengan Efek Gradasi - Warna Oranye/Emas dari Logo */
 .gradient-text {
-    background: linear-gradient(to right, #FBBF24, #F97316); /* Gradasi Emas ke Oranye */
+    background: linear-gradient(to right, #FBBF24, #F97316);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
-/* Desain Kartu dengan Efek Kaca (Glassmorphism) */
+/* Desain Kartu untuk Tema Terang - **GAYA BARU** */
 .card {
-    background: rgba(55, 65, 81, 0.4); /* Latar kartu lebih gelap */
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(156, 163, 175, 0.2);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #FFFFFF; /* PERUBAHAN: Latar kartu menjadi putih solid */
+    border: 1px solid #E5E7EB; /* PERUBAHAN: Border abu-abu terang */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* PERUBAHAN: Efek bayangan lembut */
+    transition: all 0.3s ease-out;
 }
 .card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(249, 115, 22, 0.4); /* Border oranye saat hover */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* PERUBAHAN: Efek bayangan lebih kuat saat hover */
 }
 
-/* Tombol Utama - **WARNA BARU** */
+/* Tombol Utama - Warna Oranye/Emas dari Logo */
 .btn-primary {
-    background: linear-gradient(to right, #F97316, #EA580C); /* Gradasi Oranye */
+    background: linear-gradient(to right, #F97316, #EA580C);
+    color: #FFFFFF; /* PERUBAHAN: Warna teks tombol menjadi putih */
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
 }
@@ -67,15 +67,15 @@ body {
     box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
 }
 
-/* Tombol Sekunder - **WARNA BARU** */
+/* Tombol Sekunder - Warna Oranye/Emas dari Logo */
 .btn-secondary {
     background-color: transparent;
-    border: 2px solid #F97316; /* Border Oranye */
-    color: #F97316; /* Teks Oranye */
+    border: 2px solid #F97316;
+    color: #F97316;
     transition: all 0.3s ease;
 }
 .btn-secondary:hover {
     background-color: #F97316;
-    color: #111827; /* Teks Gelap */
+    color: #FFFFFF; /* PERUBAHAN: Warna teks menjadi putih saat hover */
     transform: translateY(-3px);
 }
